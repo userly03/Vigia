@@ -1,0 +1,41 @@
+frontend/node_modules/
+frontend/.next/
+
+# graphify
+graphify-out/cache/
+graphify-out/obsidian/
+
+# Python / artefactos generados
+__pycache__/
+*.pyc
+backend/logs/
+backend/mares/storage/pngs/
+backend/mares/storage/copernicus_cache/
+frontend/tsconfig.tsbuildinfo
+graphify-out/20*/
+graphify-out/.graphify_*
+graphify-out/graph.html
+graphify-out/manifest.json
+graphify-out/.pending_changes
+graphify-out/.rebuild.lock
+backend/mares/storage/met_cache/
+
+# Secretos: los archivos de entorno reales NUNCA se versionan (solo .env.example, sin valores reales)
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env.local
+frontend/.env.*.local
+
+# Entornos virtuales de Python (se regeneran: python3 -m venv .venv && pip install -r backend/requirements.txt)
+.venv/
+backend/.venv/
+# PIDs y registros temporales de scripts/levantar.sh
+.run/
+
+# Herramientas personales (se regeneran)
+graphify-out/
+.claude/

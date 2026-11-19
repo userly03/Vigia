@@ -1,0 +1,5 @@
+pandas
+xarray
+netCDF4
+copernicusmarine
+numpy

@@ -1,0 +1,7 @@
+.venv/
+node_modules/
+.next/
+__pycache__/
+backend/logs/
+backend/mares/storage/
+*.docx

@@ -1,0 +1,103 @@
+{
+ "commit": "e32c5488d23e8cdfb6cef8b7ea1bd226c4f4b2c2",
+ "findings": {
+  "sysmap:endpoint-no-consumer:ANY /api/": {
+   "severity": "medium",
+   "title": "Ningún archivo de la web llama a ANY /api/"
+  },
+  "sysmap:endpoint-no-consumer:ANY /api/docs/": {
+   "severity": "medium",
+   "title": "Ningún archivo de la web llama a ANY /api/docs/"
+  },
+  "sysmap:endpoint-no-consumer:ANY /api/redoc/": {
+   "severity": "medium",
+   "title": "Ningún archivo de la web llama a ANY /api/redoc/"
+  },
+  "sysmap:endpoint-no-consumer:ANY /health/": {
+   "severity": "medium",
+   "title": "Ningún archivo de la web llama a ANY /health/"
+  },
+  "sysmap:endpoint-no-consumer:GET /api/schema/": {
+   "severity": "medium",
+   "title": "Ningún archivo de la web llama a GET /api/schema/"
+  },
+  "sysmap:endpoint-no-test:ANY /health/": {
+   "severity": "medium",
+   "title": "Ninguna prueba nombra ANY /health/"
+  },
+  "sysmap:endpoint-no-test:GET /api/schema/": {
+   "severity": "medium",
+   "title": "Ninguna prueba nombra GET /api/schema/"
+  },
+  "sysmap:env-undocumented:API_PROXY_TARGET": {
+   "severity": "low",
+   "title": "frontend/next.config.mjs:6 lee la variable de entorno API_PROXY_TARGET y ningún archivo de ejemplo ni documento la nombra"
+  },
+  "sysmap:env-undocumented:EMAIL_HOST": {
+   "severity": "low",
+   "title": "backend/mares/config/settings/production.py:60 lee la variable de entorno EMAIL_HOST y ningún archivo de ejemplo ni documento la nombra"
+  },
+  "sysmap:env-undocumented:EMAIL_HOST_PASSWORD": {
+   "severity": "low",
+   "title": "backend/mares/config/settings/production.py:64 lee la variable de entorno EMAIL_HOST_PASSWORD y ningún archivo de ejemplo ni documento la nombra"
+  },
+  "sysmap:env-undocumented:EMAIL_HOST_USER": {
+   "severity": "low",
+   "title": "backend/mares/config/settings/production.py:63 lee la variable de entorno EMAIL_HOST_USER y ningún archivo de ejemplo ni documento la nombra"
+  },
+  "sysmap:env-undocumented:MEDIA_ROOT": {
+   "severity": "low",
+   "title": "backend/mares/config/settings/production.py:57 lee la variable de entorno MEDIA_ROOT y ningún archivo de ejemplo ni documento la nombra"
+  },
+  "sysmap:env-undocumented:STATIC_ROOT": {
+   "severity": "low",
+   "title": "backend/mares/config/settings/production.py:56 lee la variable de entorno STATIC_ROOT y ningún archivo de ejemplo ni documento la nombra"
+  },
+  "sysmap:flow-unconsumed:env:AIS_HISTORY_INTERVAL_SECONDS": {
+   "severity": "low",
+   "title": "la variable de entorno AIS_HISTORY_INTERVAL_SECONDS se define y nada la lee"
+  },
+  "sysmap:flow-unconsumed:env:AIS_HISTORY_RETENTION_DAYS": {
+   "severity": "low",
+   "title": "la variable de entorno AIS_HISTORY_RETENTION_DAYS se define y nada la lee"
+  },
+  "sysmap:flow-unconsumed:env:ALLOWED_HOSTS": {
+   "severity": "low",
+   "title": "la variable de entorno ALLOWED_HOSTS se define y nada la lee"
+  },
+  "sysmap:flow-unconsumed:env:CABLES_CORREDOR_M": {
+   "severity": "low",
+   "title": "la variable de entorno CABLES_CORREDOR_M se define y nada la lee"
+  },
+  "sysmap:flow-unconsumed:env:CORS_ALLOWED_ORIGINS": {
+   "severity": "low",
+   "title": "la variable de entorno CORS_ALLOWED_ORIGINS se define y nada la lee"
+  },
+  "sysmap:flow-unconsumed:env:DATABASE_URL": {
+   "severity": "low",
+   "title": "la variable de entorno DATABASE_URL se define y nada la lee"
+  },
+  "sysmap:flow-unconsumed:env:TRUSTED_PROXY_COUNT": {
+   "severity": "low",
+   "title": "la variable de entorno TRUSTED_PROXY_COUNT se define y nada la lee"
+  },
+  "sysmap:model-field-never-read:Cable.actualizado": {
+   "severity": "low",
+   "title": "Cable.actualizado se guarda pero ningún endpoint ni lo que importa lo lee"
+  },
+  "sysmap:module-unused:backend/mares/config/settings/test.py": {
+   "severity": "low",
+   "title": "Ningún módulo importa backend/mares/config/settings/test.py"
+  },
+  "sysmap:no-license:license": {
+   "severity": "low",
+   "title": "El proyecto no tiene un archivo LICENSE"
+  }
+ },
+ "ignored_rules": [
+  "hidden-coupling",
+  "open-intent"
+ ],
+ "taken": "2026-11-19T03:34:17+00:00",
+ "version": 1
+}

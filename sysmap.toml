@@ -1,0 +1,42 @@
+[project]
+name = "vigia"
+python_roots = ["backend"]
+web_src = "frontend/src"
+web_call_base = "/api/v1"
+openapi = "backend/openapi.json"   # se regenera con: cd backend && DJANGO_SETTINGS_MODULE=mares.config.settings.development python manage.py spectacular --format openapi-json --file openapi.json
+
+[[layer]]
+prefix = "backend"
+name = "backend"
+
+[[layer]]
+prefix = "frontend/src"
+name = "web"
+
+[[doc_rol]]
+glob = "CLAUDE.md"
+rol = "ley"
+
+[[doc_rol]]
+glob = "docs/*.md"
+rol = "referencia"
+
+[[doc_rol]]
+glob = "README.md"
+rol = "referencia"
+
+[[doc_rol]]
+glob = "**/README.md"
+rol = "referencia"
+
+[[derived]]
+output = "backend/openapi.json"
+from = ["backend/mares/apps/*/views.py", "backend/mares/apps/*/serializers.py", "backend/mares/apps/*/models.py", "backend/mares/config/urls.py"]
+why = "esquema OpenAPI generado por `manage.py spectacular` (ver el comando en [project] openapi)"
+severity = "low"
+
+# CableTramo.corredor lo lee PostGIS, no Python: las consultas de views.py (ST_Intersects sobre cables_tramo) hacen el cruce
+# espacial en SQL. El análisis de código no ve esa lectura.
+[[write_only]]
+field = "CableTramo.corredor"
+reason = "Lo lee PostGIS en las consultas SQL de cables/views.py (ST_Intersects con índice espacial), no el código Python."

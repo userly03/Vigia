@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Los campos de formulario heredaban --foreground (casi blanco con el modo oscuro del sistema) sobre
+   fondos claros: texto ilegible. Las clases de Tailwind (p. ej. text-white en el login) siguen ganando. */
+@layer base {
+  input,
+  textarea,
+  select {
+    color: #0f172a;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ─── Globo (MapLibre) — controles y atribución en el tema oscuro de Vigía ─ */
+.maplibregl-ctrl-top-right { top: 120px; right: 4px; }
+.maplibregl-ctrl-group { background: rgba(3, 10, 24, 0.75) !important; border: 1px solid rgba(34, 211, 238, 0.25); backdrop-filter: blur(8px); box-shadow: none !important; }
+.maplibregl-ctrl-group button { border-color: rgba(34, 211, 238, 0.15) !important; }
+.maplibregl-ctrl-group button .maplibregl-ctrl-icon { filter: invert(1) hue-rotate(160deg); opacity: 0.8; }
+.maplibregl-ctrl-attrib { background: rgba(3, 10, 24, 0.7) !important; color: #7dd3fc !important; }
+.maplibregl-ctrl-attrib a { color: #7dd3fc !important; }

@@ -1,0 +1,97 @@
+{
+  "generado": "2026-11-19T00:48:00.878431+00:00",
+  "ventana_h": 8.0,
+  "buques_con_historial": 12581,
+  "buques_con_pista": 11232,
+  "evaluados": 1126,
+  "sin_fuerzas": 374,
+  "residuo_kn_mediana": 0.452,
+  "parametros": {
+    "viento_k": 0.025,
+    "tol_base_kn": 0.4,
+    "tol_viento": 0.015,
+    "min_minutos": 30,
+    "quieto_kn": 0.3
+  },
+  "tabla": {
+    "otro (15)": {
+      "indeterminado": 25,
+      "fijo": 16,
+      "propulsion": 1
+    },
+    "amarrado": {
+      "indeterminado": 349,
+      "fijo": 138,
+      "propulsion": 3,
+      "deriva": 3
+    },
+    "con motor": {
+      "fijo": 26,
+      "deriva": 21,
+      "propulsion": 152,
+      "indeterminado": 33
+    },
+    "amarrado · pero su SOG llegó a ≥3 kn (declaración vieja)": {
+      "fijo": 18,
+      "propulsion": 37,
+      "indeterminado": 23,
+      "deriva": 11
+    },
+    "con motor · pero sin moverse (SOG < 0,5 kn)": {
+      "fijo": 47,
+      "indeterminado": 111
+    },
+    "a vela": {
+      "propulsion": 1,
+      "fijo": 4,
+      "indeterminado": 3
+    },
+    "pescando": {
+      "indeterminado": 16,
+      "propulsion": 8,
+      "deriva": 1,
+      "fijo": 5
+    },
+    "maniobra restringida": {
+      "fijo": 5,
+      "propulsion": 3,
+      "indeterminado": 10,
+      "deriva": 1
+    },
+    "fondeado": {
+      "indeterminado": 24,
+      "fijo": 14
+    },
+    "otro (4)": {
+      "fijo": 1,
+      "indeterminado": 1
+    },
+    "otro (12)": {
+      "fijo": 2
+    },
+    "otro (11)": {
+      "deriva": 1,
+      "indeterminado": 2,
+      "fijo": 1
+    },
+    "otro (13)": {
+      "indeterminado": 4
+    },
+    "fondeado · pero su SOG llegó a ≥3 kn (declaración vieja)": {
+      "deriva": 1,
+      "propulsion": 2
+    },
+    "otro (6)": {
+      "indeterminado": 1
+    },
+    "otro (10)": {
+      "indeterminado": 1
+    }
+  },
+  "fuente_fuerzas": "Corrientes y viento: Open-Meteo.com (CC BY 4.0, uso no comercial)",
+  "limites": [
+    "El estado de navegación lo declara la tripulación y suele estar mal o desactualizado: no es verdad de referencia.",
+    "Corrientes de un modelo de ~8 km: no resuelve puertos, canales ni mareas finas.",
+    "No hay incidentes reales de arrastre de ancla para comparar: mide consistencia, no acierto."
+  ]
+}

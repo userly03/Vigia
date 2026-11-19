@@ -1,0 +1,9 @@
+.env
+.venv
+__pycache__
+*.pyc
+logs
+.ruff_cache
+mares/storage/pngs
+mares/storage/copernicus_cache
+mares/storage/met_cache
